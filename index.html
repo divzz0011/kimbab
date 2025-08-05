@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sinar Makmur kimbab</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 class="fade-in">Daebak Kimbab</h1>
+    <p class="fade-in">suka bingung mau jajan apa 🤔? SOLUSINYAAA!? 💥 gulung, potong, makan! kimbap sehat untuk hidup sehat! 🍙🤍 yuk, kurangi masalah kesehatan remaja dengan membeli produk kami 😆</p>
+  </header>
+
+  <section class="product-section fade-in">
+    <div class="product-card" onclick="showDetail('kimbab sehat 1 pack', 'Rp10.000')">
+      <img src="produk1.png" alt="Produk 1" />
+      <h2>kimbab sehat 1 pack</h2>
+      <p>Rp10.000</p>
+      <button class="btn" onclick="event.stopPropagation(); openCheckout('Kimbab Sehat 1 Pack', 'Rp10.000')">Checkout</button>
+    </div>
+  
+    <!-- Tambah produk lain di sini -->
+  </section>
+
+  <footer class="fade-in">
+    <p>&copy; 2025 Daebak Kimbab \\ Web By Divzz</p>
+  </footer>
+
+  <!-- Pop-up Detail Produk -->
+  <div id="detailModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="detailTitle"></h2>
+      <p id="detailPrice"></p>
+      <p style="font-style: italic;">Selain menyehatkan kimbab ini juga mengenyangkan karena di dalamnya berisi sayuran yang lezat dan juga segar dengan tambahkan sosis dan saus sambal yang membuat semakin lezattt</p>
+    </div>
+  </div>
+
+  <!-- Checkout Form -->
+  <div id="checkoutModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCheckout()">&times;</span>
+      <h2>Form Checkout</h2>
+      <form id="checkoutForm">
+        <label>Produk:</label>
+        <input type="text" id="checkoutProduct" readonly />
+        <label>Harga:</label>
+        <input type="text" id="checkoutPrice" readonly />
+        <label>Nama:</label>
+        <input type="text" required />
+        <label>Alamat/kelas:</label>
+        <textarea required></textarea>
+        <label>Jumlah produk:</label>
+        <input type="tel" required />
+        <button type="submit" class="btn">Kirim Pesanan</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
