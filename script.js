@@ -38,7 +38,7 @@ function showDetail(title, price) {
       return;
     }
   
-    const message = `Halo, saya ingin memesan:%0AProduk: ${product}%0AHarga: ${price}%0ANama: ${name}%0AAlamat: ${address}%0ANo. WhatsApp: ${userPhone}`;
+    const message = `Halo, saya ingin memesan:%0AProduk: ${product}%0AHarga: ${price}%0ANama: ${name}%0AAlamat: ${address}%0AJumlah: ${userPhone}`;
     const waNumber = "6285860606828"; // Ganti dengan nomor kamu
     const waLink = `https://wa.me/${waNumber}?text=${message}`;
   
@@ -49,4 +49,5 @@ function showDetail(title, price) {
       closeCheckout();
     }, 1000); // Delay 1 detik
   });
+
   
