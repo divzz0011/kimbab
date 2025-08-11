@@ -204,4 +204,56 @@
       font-size: 0.8rem;
     }
   }
+
+
+
+
+
+
+
+
+
+  /* Popup Instagram */
+#instagram-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  animation: bounce 1.5s infinite;
+  z-index: 9999;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#instagram-popup img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Efek hover */
+#instagram-popup:hover {
+  transform: scale(1.2);
+  background-color: #fce1f3;
+}
+
+/* Animasi bounce */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Responsif di HP */
+@media (max-width: 768px) {
+  #instagram-popup {
+      bottom: 15px;
+      right: 15px;
+      padding: 6px;
+  }
+  #instagram-popup img {
+      width: 35px;
+      height: 35px;
+  }
+}
   
