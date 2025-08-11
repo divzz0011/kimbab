@@ -51,3 +51,19 @@ function showDetail(title, price) {
   });
 
   
+
+
+
+
+
+
+// Hapus data penyimpanan agar setiap refresh dianggap pertama kali
+localStorage.removeItem("welcomeDate");
+
+const today = new Date().toLocaleDateString();
+const lastShown = localStorage.getItem("welcomeDate");
+
+if (lastShown !== today) {
+    alert("🌟 Selamat datang di website kami! 🌟");
+    localStorage.setItem("welcomeDate", today);
+}
